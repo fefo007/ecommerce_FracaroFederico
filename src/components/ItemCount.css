@@ -1,0 +1,26 @@
+
+
+.contador{
+    display: flex;
+    flex-direction: column;
+    background-color:white;
+    grid-column: 2/4;
+    align-items: center;}
+.contador__parrafo{
+    color:blue;}
+.contador___cuenta{
+    display: flex;
+    flex-direction: row;
+    width: auto;}
+.contador__cuenta__menos{
+    border-radius:50%;
+    background-color:rgb(251, 96, 96);
+    font-size:20px;}
+.contador__cuenta__numero {
+    padding-left:8px;
+    padding-right:8px;
+    border: 2px solid black;
+    background-color: white;}
+.contador__cuenta__mas{border-radius:50%;
+    background-color: rgb(93, 254, 93);
+    font-size:20px;}

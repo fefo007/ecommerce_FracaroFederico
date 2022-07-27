@@ -1,0 +1,9 @@
+
+
+.saludo__titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: blueviolet;
+    grid-column: 2/4;}
+
