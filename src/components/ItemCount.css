@@ -24,3 +24,12 @@
 .contador__cuenta__mas{border-radius:50%;
     background-color: rgb(93, 254, 93);
     font-size:20px;}
+.botonAgregarCarro{
+    border-radius:40%;
+    color: white;
+    background-color:rgb(63, 85, 250);
+}
+.botonAgregarCarro:hover{
+    color: black;
+    background-color: aqua;
+}

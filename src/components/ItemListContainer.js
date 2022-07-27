@@ -5,7 +5,7 @@ import assassins from '../complements/Image/assassinsCreed.webp'
 import callisto from '../complements/Image/callistocoleccion.webp'
 import elden from '../complements/Image/eldenRing.webp'
 import farCry from '../complements/Image/farcry6Xbox.webp'
-// import ItemCount from './ItemCount';
+import ItemCount from './ItemCount';
 
 
 
@@ -31,14 +31,17 @@ const ItemListContainer = ({greeting})=>{
             console.log(data)
             setItems(data)})
             }, []);
+    const onAdd = ()=>{
+        console.log('agregado al carrito')
+    }
     return(
         <div className="saludo__titulo">
             <h2>
                 {greeting}
             </h2>
-            {/* <div>
-                <ItemCount stock={6} imitial={1}/>
-            </div> */}
+            <div>
+                <ItemCount stock={6} initial={0} onAdd={onAdd}/>
+            </div>
             <div className='ItemListContainer'>
                 <ItemList items={items}/>
             </div>
