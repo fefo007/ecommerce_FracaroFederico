@@ -6,11 +6,16 @@ import pcLogo from '../complements/Logos/pcLogo.webp'
 import playLogo from '../complements/Logos/playLogo.webp'
 import exboxLogo from '../complements/Logos/exboxLogo.webp'
 import CartWidget from './CartWidget';
+import GamerHouseLogo from '../complements/Logos/gamerLogo.png'
 
 function NavBar() {
   return (
-    <Navbar className='navbar' bg="light" expand="lg">
-      <Container id='barraNav' fluid>
+    <div className='navbarContainer'>
+    <div className='navbarContainer__logo'>
+      <img height='80' src={GamerHouseLogo} alt='GamerLogo' />
+    </div>
+    <Navbar className='navbarContainer__nav' variant='dark' expand="lg">
+      <Container  id='barraNav' fluid>
         <Navbar.Brand href="#"><CartWidget /></Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
@@ -19,7 +24,7 @@ function NavBar() {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <NavDropdown title="Categorias" id="navbarScrollingDropdown">
+            <NavDropdown  title="Categorias" id="navbarScrollingDropdown">
               <NavDropdown.Item href="#action1">Accesorios</NavDropdown.Item>
               <NavDropdown.Item href="#action2">
                 Consolas
@@ -31,7 +36,7 @@ function NavBar() {
                 Video Juegos
               </NavDropdown.Item>
             </NavDropdown>
-            <NavDropdown title="Plataforma" id="navbarScrollingDropdown">
+            <NavDropdown  title="Plataforma" id="navbarScrollingDropdown">
               <NavDropdown.Item href="#action1">Nintendo <img src={nintendoLogo} height='20' alt="logo" /></NavDropdown.Item>
               <NavDropdown.Item href="#action2">
               PC <img src={pcLogo} height='20' alt="logo" />
@@ -43,6 +48,8 @@ function NavBar() {
                 Xbox <img src={exboxLogo} height='20' alt="logo" />
               </NavDropdown.Item>
             </NavDropdown>
+            <Nav.Link href="#Contacto">Contacto</Nav.Link>
+            <Nav.Link href="#Sobre Nosotros">Sobre Nosotros</Nav.Link>
           </Nav>
           <Form className="d-flex">
             <Form.Control
@@ -51,11 +58,12 @@ function NavBar() {
               className="me-2"
               aria-label="Search"
             />
-            <Button variant="outline-success">Buscar</Button>
+            <Button variant="outline-light">Buscar</Button>
           </Form>
         </Navbar.Collapse>
       </Container>
     </Navbar>
+  </div>
   );
 }
 

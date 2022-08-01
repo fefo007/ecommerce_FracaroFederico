@@ -1,5 +1,8 @@
 
 .ItemList{
-    display: flex;
+    display:flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
