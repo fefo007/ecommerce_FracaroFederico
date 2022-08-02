@@ -3,18 +3,21 @@ import ItemDetail from "./ItemDetail";
 import { getItem } from "./utility/apiSimulator";
 import Button from 'react-bootstrap/Button';
 import Spinner from 'react-bootstrap/Spinner';
+import {useParams} from 'react-router-dom'
 
 const ItemDetailContainer = () => {
     const [item, setItem] = useState();
     const [Loading,setLoading]=useState(true)
+    const {id}=useParams()
+
     useEffect(() => {
-        getItem()
+        getItem(id)
         .then(product => {
-            setItem(product)})
+            setItem(product.filter((item)=>item.id===parseInt(id))[0])})
         .catch((error)=>
             console.error(error))
         .finally(()=>setLoading(false))
-        }, []);
+        }, [id]);
         
     return ( 
         <div>

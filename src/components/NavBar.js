@@ -7,12 +7,16 @@ import playLogo from '../complements/Logos/playLogo.webp'
 import exboxLogo from '../complements/Logos/exboxLogo.webp'
 import CartWidget from './CartWidget';
 import GamerHouseLogo from '../complements/Logos/gamerLogo.png'
+import { LinkContainer } from 'react-router-bootstrap'
+import { Link } from 'react-router-dom'
 
 function NavBar() {
   return (
     <div className='navbarContainer'>
     <div className='navbarContainer__logo'>
-      <img height='80' src={GamerHouseLogo} alt='GamerLogo' />
+      <Link to='/'>
+        <img height='80' src={GamerHouseLogo} alt='GamerLogo' />
+      </Link>
     </div>
     <Navbar className='navbarContainer__nav' variant='dark' expand="lg">
       <Container  id='barraNav' fluid>
@@ -25,31 +29,61 @@ function NavBar() {
             navbarScroll
           >
             <NavDropdown  title="Categorias" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action1">Accesorios</NavDropdown.Item>
-              <NavDropdown.Item href="#action2">
-                Consolas
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action3">
-                Gift Cards
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action4">
-                Video Juegos
-              </NavDropdown.Item>
+              <LinkContainer to='/category/Accesorios'>
+                <NavDropdown.Item >
+                  Accesorios
+                </NavDropdown.Item>
+              </LinkContainer>
+              <LinkContainer to='/category/Consolas'>
+                <NavDropdown.Item >
+                  Consolas
+                </NavDropdown.Item>
+              </LinkContainer>
+              <LinkContainer to='/category/Gift-Cards'>
+                <NavDropdown.Item >
+                  Gift Cards
+                </NavDropdown.Item>
+              </LinkContainer>
+              <LinkContainer to='/category/Video-Juegos'>
+                <NavDropdown.Item >
+                  Video Juegos
+                </NavDropdown.Item>
+              </LinkContainer>
             </NavDropdown>
             <NavDropdown  title="Plataforma" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action1">Nintendo <img src={nintendoLogo} height='20' alt="logo" /></NavDropdown.Item>
-              <NavDropdown.Item href="#action2">
-              PC <img src={pcLogo} height='20' alt="logo" />
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action3">
-                Playstation <img src={playLogo} height='20' alt="logo" />
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action4">
-                Xbox <img src={exboxLogo} height='20' alt="logo" />
-              </NavDropdown.Item>
+              <LinkContainer to='/consol/Nintendo'>
+                <NavDropdown.Item >
+                  Nintendo <img src={nintendoLogo} height='20' alt="logoNintendo" />
+                </NavDropdown.Item>
+              </LinkContainer>
+              <LinkContainer to='/consol/PC'>
+                <NavDropdown.Item >
+                  PC <img src={pcLogo} height='20' alt="logoPc" />
+                </NavDropdown.Item>
+              </LinkContainer>
+              <LinkContainer to='/consol/PlayStation'>
+                <NavDropdown.Item >
+                  Playstation <img src={playLogo} height='20' alt="logoPlay" />
+                </NavDropdown.Item>
+              </LinkContainer>
+              <LinkContainer to='/consol/Xbox'>
+                <NavDropdown.Item >
+                  Xbox <img src={exboxLogo} height='20' alt="logoXbox" />
+                </NavDropdown.Item>
+              </LinkContainer>
             </NavDropdown>
-            <Nav.Link href="#Contacto">Contacto</Nav.Link>
-            <Nav.Link href="#Sobre Nosotros">Sobre Nosotros</Nav.Link>
+                <LinkContainer className='navContacto' to='/contact'>
+                  <Nav.Link>
+                    Contacto
+                  </Nav.Link>
+                </LinkContainer>
+                <LinkContainer className='navNosotros' to='/about'>
+                  <Nav.Link>
+                    Sobre Nosotros
+                  </Nav.Link>
+                </LinkContainer>
+
+            
           </Nav>
           <Form className="d-flex">
             <Form.Control

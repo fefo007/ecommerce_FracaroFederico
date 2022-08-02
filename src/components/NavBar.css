@@ -18,5 +18,17 @@
     justify-content: center;
     padding-top: 10px;
     background-image: url(../complements/Image/fondoLogo.webp);
-    background-size:contain;
+    background-size:50%;
 }
+.navContacto{
+    display: flex;
+    color:rgb(209, 203, 203);
+    text-decoration: none;}
+    .navContacto:hover{color:white;}
+.navNosotros{
+    display: flex;
+    color: rgb(209, 203, 203);
+    text-decoration: none;
+    text-decoration: none;}
+    .navNosotros:hover{color:white;}
+
