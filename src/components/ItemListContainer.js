@@ -10,19 +10,22 @@ const ItemListContainer = ({greeting})=>{
     const [items, setItems] = useState([]);
     console.log(items)
     const [Loading,setLoading]=useState(true)
-    const {consol} =useParams()
+    const {consol,category} =useParams()
     console.log(consol)
+    
     useEffect(() => {
         mock()
         .then((data) => {
             if(consol)
                 {setItems(data.filter((items)=>items.consol===consol))}
+            else if(category)
+                {setItems(data.filter((items)=>items.category===category))}
             else{setItems(data)
                 console.log(data)}})
         .catch((error)=>
             console.error(error))
         .finally(()=>setLoading(false))
-        }, [consol]);
+        }, [consol,category]);
 
     return(
         <main className="main">

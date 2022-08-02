@@ -39,12 +39,12 @@ function NavBar() {
                   Consolas
                 </NavDropdown.Item>
               </LinkContainer>
-              <LinkContainer to='/category/Gift-Cards'>
+              <LinkContainer to='/category/GiftCards'>
                 <NavDropdown.Item >
                   Gift Cards
                 </NavDropdown.Item>
               </LinkContainer>
-              <LinkContainer to='/category/Video-Juegos'>
+              <LinkContainer to='/category/VideoJuego'>
                 <NavDropdown.Item >
                   Video Juegos
                 </NavDropdown.Item>
