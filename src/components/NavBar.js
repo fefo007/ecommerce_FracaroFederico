@@ -20,7 +20,11 @@ function NavBar() {
     </div>
     <Navbar className='navbarContainer__nav' variant='dark' expand="lg">
       <Container  id='barraNav' fluid>
-        <Navbar.Brand href="#"><CartWidget /></Navbar.Brand>
+        <Navbar.Brand >
+          <Link className='cartWidget' to='/cart'>
+          <CartWidget />
+          </Link>
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -88,7 +92,7 @@ function NavBar() {
           <Form className="d-flex">
             <Form.Control
               type="search"
-              placeholder="Search"
+              placeholder="Buscar"
               className="me-2"
               aria-label="Search"
             />

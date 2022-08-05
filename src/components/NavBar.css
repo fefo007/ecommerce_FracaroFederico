@@ -31,4 +31,8 @@
     text-decoration: none;
     text-decoration: none;}
     .navNosotros:hover{color:white;}
+.cartWidget{
+    text-decoration: none;
+    color:rgb(209, 203, 203);}
+    .cartWidget:hover{color:white;}
 

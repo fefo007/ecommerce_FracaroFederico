@@ -41,7 +41,7 @@ const products = [
         text:'Assassins Creed Valhalla es un RPG de acción ambientado durante la invasión vikinga de Inglaterra. Los jugadores tendrán la oportunidad de encarnar al líder de un clan nórdico que ha sido expulsado de Noruega durante las primeras horas del juego y que decide asentarse en Inglaterra para empezar una nueva vida. Pero este es un territorio hostil que no quiere a los vikingos allí, así que debes encontrar la manera de construir tu asentamiento, hacer alianzas a través de la diplomacia o la espada y crecer para satisfacer a tu gente. Mientras, el jugador debe lidiar con una profecía que afirma que traicionará a su familiar más cercano, a su hermano Sigurd. Así que hay una gran historia política con el asentamiento y las alianzas y también hay una historia personal sobre la familia y la traición. En este juego te conviertes en un vikingo, experimentas todo lo que significa ser un vikingo en la Inglaterra del siglo IX.'},
     {   id:1,
         name:'The Callisto Protocol',
-        console:'PC',
+        consol:'PC',
         category:'VideoJuego',
         price:'$25000',
         image:`${callisto}`,

@@ -8,6 +8,9 @@ import "./components/Item.css";
 import './components/ItemDetail.css'
 import { BrowserRouter } from 'react-router-dom';
 import './components/Footer.css';
+import './components/ItemCount.css';
+import './components/Contact.css'
+import './components/About.css'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

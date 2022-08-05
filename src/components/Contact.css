@@ -1,0 +1,6 @@
+.contacto{
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    background-image: url(../complements/Image/fondo-gamer.webp);
+}
