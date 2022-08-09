@@ -8,10 +8,10 @@ import {useParams} from 'react-router-dom'
 
 const ItemListContainer = ({greeting})=>{
     const [items, setItems] = useState([]);
-    console.log(items)
+
     const [Loading,setLoading]=useState(true)
     const {consol,category} =useParams()
-    console.log(consol)
+
     
     useEffect(() => {
         mock()

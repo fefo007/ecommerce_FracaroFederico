@@ -3,12 +3,11 @@ import { useNavigate } from "react-router-dom";
 import { CartContext } from "../context/CartContext";
 import ItemCount from "./ItemCount";
 
-
-
 const ItemDetail = ({item}) => {
+
     const [hideButom,setHideButom]=useState(true)
     const {addToCart} = useContext(CartContext);
-    const navToCart=useNavigate()
+    const navTo=useNavigate()
     const [count, setCount] = useState(0);
     console.log(item)
     const handleAdd=(quantityToAdd)=>{
@@ -18,7 +17,10 @@ const ItemDetail = ({item}) => {
         setHideButom(false)
     }   
     const goToCart = ()=>{
-        navToCart('/cart')
+        navTo('/cart')
+    }
+    const returnHome = ()=>{
+        navTo('/')
     }
 useEffect(()=>{
     console.log(count)
@@ -42,8 +44,11 @@ return (
             <div className="itemDetail__aside__price">
                 {item?.price}
             </div>
-            <ItemCount stock={6} initial={0} onAdd={handleAdd} />
-            <button className="itemDetail__aside__buy" hidden={hideButom} onClick={goToCart}>Comprar</button>
+            <ItemCount stock={6} initial={1} onAdd={handleAdd} />
+            <div className="itemDetail__aside__butons" hidden={hideButom}>
+                <button className="itemDetail__aside__butons__buy"  onClick={goToCart}>Comprar</button>
+                <button className="itemDetail__aside__butons__return"  onClick={returnHome}>Continuar Comprando</button>
+            </div>
         </aside>
     </section>
     );

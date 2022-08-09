@@ -5,8 +5,7 @@ export const CartContext = createContext({});
 
 const CartProvider=({children})=>{
     const [cart, setCart] = useState([]);
-    console.log(cart.length)
-    const isInCart=()=>{}
+
     // VACIAR POR COMPLETO CARRITO
     const cleanCart=()=>{
         setCart([])
@@ -32,10 +31,20 @@ const CartProvider=({children})=>{
                 setCart(cartDraft)
             }
     }
+    // QUITAR PRODUCTO DEL CARRITO
+    const removeToCart=(idItem)=>{
+        const cartDraft =[...cart]
+        const itemToRemove=cart.find((itemToRemove)=>itemToRemove.id===idItem)
+        const index=cart.indexOf(itemToRemove)
+        cartDraft.splice(index,1)
+        setCart(cartDraft)
+    }
 
-    const removeToCart=()=>{}
-    
-    const contextValue ={cart,isInCart,cleanCart,addToCart,removeToCart,quantityInCart:cart.length}
+    let quantityInCart=0
+    cart.forEach((item)=>{quantityInCart+=item.quantity})
+    // SEGUNDA FORMA
+    // const quantityInCart= cart.reduce((previus,item)=>previus + item.quantity, 0)
+    const contextValue ={cart,cleanCart,addToCart,removeToCart,quantityInCart}
     return(
         <CartContext.Provider value={contextValue}>
             {children}

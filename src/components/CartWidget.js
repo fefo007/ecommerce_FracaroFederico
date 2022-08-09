@@ -5,12 +5,13 @@ import { CartContext } from '../context/CartContext';
 
 
 const CartWidget= ()=>{
-    const contextValue = useContext(CartContext);
-    console.log(contextValue)
+    const {quantityInCart} = useContext(CartContext);
+    console.log(quantityInCart)
+    
     return(
         <div>
             <img src={CarLogo}  height='20' alt="logo" />
-            <span>{contextValue.quantityInCart}</span>
+            <span>{quantityInCart}</span>
         </div>
     )
 }
