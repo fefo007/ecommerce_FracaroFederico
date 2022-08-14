@@ -6,8 +6,10 @@ import { CartContext } from '../context/CartContext';
 
 const CartWidget= ()=>{
     const {quantityInCart} = useContext(CartContext);
-    console.log(quantityInCart)
-    
+
+    if(quantityInCart===0){
+        return <></>
+    }
     return(
         <div>
             <img src={CarLogo}  height='20' alt="logo" />

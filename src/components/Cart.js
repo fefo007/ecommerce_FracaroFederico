@@ -1,30 +1,30 @@
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
 
+
 const Cart = ({cart}) => {
     const {removeToCart} = useContext(CartContext);
     const totalProducto=cart.price*cart.quantity
-    console.log(cart)
+
     return ( 
-                <section >
-                    <div>
-                        <h3>Productos</h3>
-                        <div>{cart.image}</div>
-                    </div>
-                    <div>
-                        <h3>Cantidad</h3>
-                        <div>{cart.quantity}</div>
-                    </div>
-                    <div>
-                        <h3>Precio Unitario</h3>
-                        <div>{cart.price}</div>
-                        <button onClick={()=>removeToCart(cart.id)}>Quitar producto</button>
-                    </div>
-                    <div>
-                        <h3>Total Producto</h3>
-                        <div>{totalProducto}</div>
-                    </div>
-                </section>
+            <section className="cart">
+                <div className="cart__productos">
+                    <img height='100' alt={cart.name} src={cart.image}></img>
+                    <p>{cart.name}</p>
+                </div>
+                <div className="cart__cant">
+                    {cart.quantity}
+                </div>
+                <div className="cart__unit">
+                    ${cart.price}
+                </div>
+                <div className="cart__totalProd">
+                    ${totalProducto}
+                </div>
+                <div className="cart__botonQuitar">
+                    <button onClick={()=>removeToCart(cart.id)}>Quitar producto</button>
+                </div>
+            </section>
         );
 }
 

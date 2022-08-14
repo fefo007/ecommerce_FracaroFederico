@@ -24,12 +24,15 @@
 .contador__cuenta__mas{border-radius:50%;
     background-color: rgb(93, 254, 93);
     font-size:20px;}
-.botonAgregarCarro{
-    border-radius:40%;
-    color: white;
-    background-color:rgb(63, 85, 250);
+
+.botonAgregarCarro {
+    border-color: #3498db;
+    color: #fff;
+    box-shadow: 0 0 40px 40px #3498db inset, 0 0 0 0 #3498db;
+    -webkit-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
 }
-.botonAgregarCarro:hover{
-    color: black;
-    background-color: aqua;
+.botonAgregarCarro:hover {
+    box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
+    background-color: white;
 }

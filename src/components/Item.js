@@ -12,7 +12,7 @@ const Item = ({item}) => {
                     {item?.name}
                 </Card.Title>
                 <Card.Text className='itemPrice'>
-                    {item?.price}
+                    ${item?.price}
                 </Card.Text>
                 <Card.Text className='itemConsol'>
                     {item?.consol}

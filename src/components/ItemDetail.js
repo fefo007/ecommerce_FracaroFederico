@@ -2,6 +2,8 @@ import { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { CartContext } from "../context/CartContext";
 import ItemCount from "./ItemCount";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const ItemDetail = ({item}) => {
 
@@ -10,11 +12,23 @@ const ItemDetail = ({item}) => {
     const navTo=useNavigate()
     const [count, setCount] = useState(0);
     console.log(item)
+    const toastInfo = ()=>{
+        toast.success('Agregado al carrito', {
+            position: "bottom-right",
+            autoClose: 1500,
+            hideProgressBar: true,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            });
+    }
     const handleAdd=(quantityToAdd)=>{
         console.log('handleAdd',quantityToAdd)
         setCount(quantityToAdd)
         addToCart(item,quantityToAdd)
         setHideButom(false)
+        toastInfo()
     }   
     const goToCart = ()=>{
         navTo('/cart')
@@ -50,6 +64,7 @@ return (
                 <button className="itemDetail__aside__butons__return"  onClick={returnHome}>Continuar Comprando</button>
             </div>
         </aside>
+        <ToastContainer />
     </section>
     );
 }

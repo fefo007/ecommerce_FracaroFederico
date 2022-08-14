@@ -3,6 +3,7 @@ import { createContext, useState } from "react";
 
 export const CartContext = createContext({});
 
+
 const CartProvider=({children})=>{
     const [cart, setCart] = useState([]);
 
@@ -39,12 +40,14 @@ const CartProvider=({children})=>{
         cartDraft.splice(index,1)
         setCart(cartDraft)
     }
+    let totalInCart=0
+    cart.forEach((item)=>{totalInCart+=(item.quantity*item.price)})
 
     let quantityInCart=0
     cart.forEach((item)=>{quantityInCart+=item.quantity})
     // SEGUNDA FORMA
     // const quantityInCart= cart.reduce((previus,item)=>previus + item.quantity, 0)
-    const contextValue ={cart,cleanCart,addToCart,removeToCart,quantityInCart}
+    const contextValue ={cart,cleanCart,addToCart,removeToCart,quantityInCart,totalInCart}
     return(
         <CartContext.Provider value={contextValue}>
             {children}

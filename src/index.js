@@ -1,16 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './index.css';
 import "./components/Item.css";
 import './components/ItemDetail.css'
-import { BrowserRouter } from 'react-router-dom';
 import './components/Footer.css';
 import './components/ItemCount.css';
 import './components/Contact.css'
 import './components/About.css'
+import './components/CartContainer.css'
+import './components/Cart.css'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
