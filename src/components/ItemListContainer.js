@@ -11,7 +11,6 @@ const ItemListContainer = ({greeting})=>{
 
     const [Loading,setLoading]=useState(true)
     const {consol,category} =useParams()
-
     
     useEffect(() => {
         mock()

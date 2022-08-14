@@ -11,7 +11,6 @@ const ItemDetail = ({item}) => {
     const {addToCart} = useContext(CartContext);
     const navTo=useNavigate()
     const [count, setCount] = useState(0);
-    console.log(item)
     const toastInfo = ()=>{
         toast.success('Agregado al carrito', {
             position: "bottom-right",
