@@ -1,22 +1,35 @@
 import { useEffect, useState } from "react";
 import ItemDetail from "./ItemDetail";
-import { getItem } from "./utility/apiSimulator";
+// import { getItem } from "./utility/apiSimulator";
 import Button from 'react-bootstrap/Button';
 import Spinner from 'react-bootstrap/Spinner';
 import {useParams} from 'react-router-dom'
+import { getFirestore,doc,getDoc } from "firebase/firestore";
 
 const ItemDetailContainer = () => {
     const [item, setItem] = useState();
-    const [Loading,setLoading]=useState(true)
+    const [Loading,setLoading]=useState(true)   
     const {id}=useParams()
 
     useEffect(() => {
-        getItem(id)
-        .then(product => {
-            setItem(product.filter((item)=>item.id===parseInt(id))[0])})
-        .catch((error)=>
-            console.error(error))
-        .finally(()=>setLoading(false))
+        const db=getFirestore()
+        const producRef=doc(db,'productos',id)
+        getDoc(producRef)
+        .then((snapshot)=>{
+            setItem({...snapshot.data(),id:snapshot.id})
+        })
+        .catch((error)=>{
+            console.log(error);
+        })
+        .finally(()=>{
+            setLoading(false)
+        })
+        // getItem(id)
+        // .then(product => {
+        //     setItem(product.filter((item)=>item.id===parseInt(id))[0])})
+        // .catch((error)=>
+        //     console.error(error))
+        // .finally(()=>setLoading(false))
         }, [id]);
         
     return ( 

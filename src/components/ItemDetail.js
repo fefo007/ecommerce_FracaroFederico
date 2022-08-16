@@ -42,12 +42,12 @@ useEffect(()=>{
 return ( 
     <section className="itemDetail">
         <h3 className="itemDetail__title">{item?.name}</h3>
-        <img className="itemDetail__image" height={350} src={item?.image} alt='assassinsCreedVal' />
+        <img className="itemDetail__image" height={350} src={item?.image} alt={item?.name} />
         <h2 className="itemDetail__subtitle1">Screenshots</h2>
         <div className="itemDetail__screens">
-            <img className="itemDetail__screens__img" height={250} src={item?.screen.a} alt='assassinsA'/>
-            <img className="itemDetail__screens__img" height={250} src={item?.screen.b} alt='assassinsB'/>
-            <img className="itemDetail__screens__img" height={250} src={item?.screen.c} alt='assassinsC'/>
+            <img className="itemDetail__screens__img" height={250} src={item?.screens[0]} alt={item?.name}/>
+            <img className="itemDetail__screens__img" height={250} src={item?.screens[1]} alt={item?.name}/>
+            <img className="itemDetail__screens__img" height={250} src={item?.screens[2]} alt={item?.name}/>
         </div>
         <h2 className="itemDetail__subtitle2">Sinopsis</h2>
         <div className="itemDetail__text">
@@ -57,7 +57,7 @@ return (
             <div className="itemDetail__aside__price">
                 {item?.price}
             </div>
-            <ItemCount stock={6} initial={1} onAdd={handleAdd} />
+            <ItemCount stock={item.stock} initial={1} onAdd={handleAdd} />
             <div className="itemDetail__aside__butons" hidden={hideButom}>
                 <button className="itemDetail__aside__butons__buy"  onClick={goToCart}>Comprar</button>
                 <button className="itemDetail__aside__butons__return"  onClick={returnHome}>Continuar Comprando</button>

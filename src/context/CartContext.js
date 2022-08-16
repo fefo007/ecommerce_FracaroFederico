@@ -31,6 +31,7 @@ const CartProvider=({children})=>{
                 const cartDraft = [...cart,itemToAdd]
                 setCart(cartDraft)
             }
+            
     }
     // QUITAR PRODUCTO DEL CARRITO
     const removeToCart=(idItem)=>{
@@ -39,6 +40,7 @@ const CartProvider=({children})=>{
         const index=cart.indexOf(itemToRemove)
         cartDraft.splice(index,1)
         setCart(cartDraft)
+        
     }
     let totalInCart=0
     cart.forEach((item)=>{totalInCart+=(item.quantity*item.price)})

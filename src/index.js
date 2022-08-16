@@ -14,6 +14,24 @@ import './components/About.css'
 import './components/CartContainer.css'
 import './components/Cart.css'
 
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyBhISuUCDG_D3ASir3CMajJphggtpkLoPE",
+  authDomain: "gamer-house-ecommerce.firebaseapp.com",
+  projectId: "gamer-house-ecommerce",
+  storageBucket: "gamer-house-ecommerce.appspot.com",
+  messagingSenderId: "66992498487",
+  appId: "1:66992498487:web:28db4b125e80cee3771cb2"
+};
+
+// Initialize Firebase
+initializeApp(firebaseConfig);
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>

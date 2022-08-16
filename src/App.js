@@ -20,8 +20,8 @@ function App() {
           <NavBar/>
           <Routes>
             <Route path='/' element={<ItemListContainer greeting='Bienvenido a Gamer House'/>}/>
-            <Route path='/consol/:consol' element={<ItemListContainer greeting='Bienvenido a Gamer House'/>}/>
-            <Route path='/category/:category' element={<ItemListContainer greeting='Bienvenido a Gamer House'/>}/>
+            <Route path='/consol/:id' element={<ItemListContainer greeting='Bienvenido a Gamer House'/>}/>
+            <Route path='/category/:id' element={<ItemListContainer greeting='Bienvenido a Gamer House'/>}/>
             <Route path='/item/:id' element={<ItemDetailContainer/>}/>
             <Route path='/cart' element={<CartContainer/>}/>
             <Route path='/contact' element={<Contact/>}/>
