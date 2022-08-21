@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { CartContext } from "../context/CartContext";
 import ItemCount from "./ItemCount";
 import { ToastContainer, toast } from 'react-toastify';
+import { Flip} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const ItemDetail = ({item}) => {
@@ -20,6 +21,7 @@ const ItemDetail = ({item}) => {
             pauseOnHover: true,
             draggable: true,
             progress: undefined,
+            theme: "colored"
             });
     }
     const handleAdd=(quantityToAdd)=>{
@@ -55,7 +57,7 @@ return (
         </div>
         <aside className="itemDetail__aside">
             <div className="itemDetail__aside__price">
-                {item?.price}
+                ${item?.price}
             </div>
             <ItemCount stock={item.stock} initial={1} onAdd={handleAdd} />
             <div className="itemDetail__aside__butons" hidden={hideButom}>
@@ -63,7 +65,7 @@ return (
                 <button className="itemDetail__aside__butons__return"  onClick={returnHome}>Continuar Comprando</button>
             </div>
         </aside>
-        <ToastContainer />
+        <ToastContainer transition={Flip} />
     </section>
     );
 }

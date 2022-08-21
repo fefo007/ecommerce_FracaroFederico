@@ -42,9 +42,10 @@ const CartProvider=({children})=>{
         setCart(cartDraft)
         
     }
+    // SUMA TOTAL DE LOS PRODUCTOS DEL CARRO
     let totalInCart=0
     cart.forEach((item)=>{totalInCart+=(item.quantity*item.price)})
-
+    // CATIDAD DE LOS ITEMS EN EL CARRO
     let quantityInCart=0
     cart.forEach((item)=>{quantityInCart+=item.quantity})
     // SEGUNDA FORMA

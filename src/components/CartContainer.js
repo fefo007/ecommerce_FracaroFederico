@@ -1,19 +1,25 @@
-import { useContext} from "react";
+import { useContext, useState} from "react";
 import { CartContext } from "../context/CartContext";
 import Cart from "./Cart";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
+import emtyCart from '../emtyCart.jpg'
+import BuyModal from "./BuyModal";
 
 const CartContainer = () => {
     const {cart,cleanCart,totalInCart} = useContext(CartContext);
-
-    // <div>
-    //     <p>Carrito sin Productos</p>
-    //     <Link to='/'>
-    //     <button>Ir al Catalogo</button>
-    //     </Link>
-    // </div>
-
+    const [show, setShow] = useState(false);
+    const handleShow = () => setShow(true);
     return ( 
+        <>
+        {!cart.length?
+            <div className="cartContainer">
+                <h2 className="cartContainer__titulo">Carrito sin Productos</h2>
+                <img className="cartContainer__imagen" src={emtyCart} alt='carro vacio'></img>
+                <Link className="cartContainer__botones" to='/'>
+                    <button className="cartContainer__botones__btn">Ir al Catalogo</button>
+                </Link>
+            </div>
+        :
         <main className="cartContainer">
             <h2 className="cartContainer__titulo">Carro de compras</h2>
             <div className="cartContainer__productos">
@@ -36,9 +42,12 @@ const CartContainer = () => {
             </div>
             <div className="cartContainer__botones">
                 <button className="cartContainer__botones__btn" onClick={cleanCart} >Vaciar Carrito</button>
-                <button className="cartContainer__botones__btn">Comprar</button>
+                <button className="cartContainer__botones__btn" onClick={handleShow}>Comprar</button>
             </div>
-        </main>
+        </main>}
+        <BuyModal show={show} setShow={setShow}/>
+        </>
+    
     );
 }
 

@@ -1,0 +1,28 @@
+
+.modal__header{
+    background-color: bisque;
+}
+.modal__body{
+    background-color: bisque;
+    border:10px 0px;
+    border-color:rgb(147, 26, 147) ;
+    border-style: solid;
+}
+.modal__footer{
+    background-color: bisque;
+}
+.modal__footer__button{
+    border-color: rgb(147, 26, 147);
+    color: #fff;
+    border-radius: 20%;
+    box-shadow: 0 0 40px 40px rgb(147, 26, 147) inset, 0 0 0 0 rgb(147, 26, 147);
+    -webkit-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+    .modal__footer__button:hover{
+        box-shadow: 0 0 10px 0 rgb(147, 26, 147) inset, 0 0 10px 4px rgb(147, 26, 147);
+        color:rgb(147, 26, 147);
+        background-color: white;
+    }

@@ -63,7 +63,6 @@
     grid-row: 3/6;
     background-color: white;
     align-content: stretch;
-    padding-top: 5px;
     border: rgb(147, 26, 147) solid 5px;
 }
 
@@ -80,6 +79,7 @@
 .cartContainer__botones{
     display: flex;
     flex-direction: row;
+    text-decoration: none;
     grid-column: 2/6;
     grid-row: 7/8;
     justify-content:center;
@@ -99,4 +99,11 @@
     box-shadow: 0 0 10px 0 rgb(147, 26, 147) inset, 0 0 10px 4px rgb(147, 26, 147);
     color:rgb(147, 26, 147);
     background-color: white;
+}
+.cartContainer__imagen{
+    display: flex;
+    grid-column: 2/6;
+    grid-row: 2/6;
+    justify-self: center;
+    border: 8px solid orange;
 }

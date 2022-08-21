@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import ItemDetail from "./ItemDetail";
-// import { getItem } from "./utility/apiSimulator";
 import Button from 'react-bootstrap/Button';
 import Spinner from 'react-bootstrap/Spinner';
 import {useParams} from 'react-router-dom'
@@ -24,12 +23,6 @@ const ItemDetailContainer = () => {
         .finally(()=>{
             setLoading(false)
         })
-        // getItem(id)
-        // .then(product => {
-        //     setItem(product.filter((item)=>item.id===parseInt(id))[0])})
-        // .catch((error)=>
-        //     console.error(error))
-        // .finally(()=>setLoading(false))
         }, [id]);
         
     return ( 

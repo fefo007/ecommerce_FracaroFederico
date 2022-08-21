@@ -7,32 +7,52 @@
     grid-column: 2/4;
     align-items: center;}
 .contador__parrafo{
-    color:blue;}
+    color:rgb(147, 26, 147);
+    font-size:150%;
+    }
 .contador___cuenta{
     display: flex;
     flex-direction: row;
     width: auto;}
 .contador__cuenta__menos{
-    border-radius:50%;
-    background-color:rgb(251, 96, 96);
+    width:20px;
+    color: white;
+    border-radius:25%;
+    background-color:rgb(184, 57, 57);
     font-size:20px;}
+    .contador__cuenta__menos:hover{
+        color: black;
+        background-color:rgb(255, 9, 9);
+    }
 .contador__cuenta__numero {
-    padding-left:8px;
-    padding-right:8px;
+    margin:0px 10px;
+    padding-left:15px;
+    padding-right:15px;
     border: 2px solid black;
     background-color: white;}
-.contador__cuenta__mas{border-radius:50%;
-    background-color: rgb(93, 254, 93);
+.contador__cuenta__mas{
+    width:20px;
+    color: white;
+    border-radius:25%;
+    background-color: rgb(51, 170, 51);
     font-size:20px;}
+    .contador__cuenta__mas:hover{
+        color: black;
+        background-color:rgb(19, 253, 19) ;
+    }
 
 .botonAgregarCarro {
-    border-color: #3498db;
+    padding: 0px 10px;
+    margin-top: 10px;
+    border-radius: 30%;
+    border-color: rgb(147, 26, 147);
     color: #fff;
-    box-shadow: 0 0 40px 40px #3498db inset, 0 0 0 0 #3498db;
+    box-shadow: 0 0 40px 40px rgb(147, 26, 147) inset, 0 0 0 0 rgb(147, 26, 147);
     -webkit-transition: all 150ms ease-in-out;
     transition: all 150ms ease-in-out;
 }
 .botonAgregarCarro:hover {
-    box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
+    box-shadow: 0 0 10px 0 rgb(147, 26, 147) inset, 0 0 10px 4px rgb(147, 26, 147);
     background-color: white;
+    color: rgb(147, 26, 147);
 }

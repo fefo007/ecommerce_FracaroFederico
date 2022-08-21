@@ -10,9 +10,24 @@ import Contact from './components/Contact';
 import About from './components/About';
 import CartProvider from './context/CartContext'
 import CartContainer from './components/CartContainer';
+// import { collection } from 'firebase/firestore';
 
 
 function App() {
+  // useEffect(() => {
+  //   const productCollection=collection(db,'productos')
+  //   const productos=[
+  //     {name:'',
+  //     image:'',
+  //     consol:'',
+  //     price:,
+  //     stock:,
+  //     category:'',
+  //     screens:{a:'',b:'',c:''},
+  //     text:''
+  //     }
+  //   ]
+  // }, []);
   return (
     <div className="App">
       <header className="App-header">
@@ -20,7 +35,7 @@ function App() {
           <NavBar/>
           <Routes>
             <Route path='/' element={<ItemListContainer greeting='Bienvenido a Gamer House'/>}/>
-            <Route path='/consol/:id' element={<ItemListContainer greeting='Bienvenido a Gamer House'/>}/>
+            <Route path='/consol/:consolid' element={<ItemListContainer greeting='Bienvenido a Gamer House'/>}/>
             <Route path='/category/:id' element={<ItemListContainer greeting='Bienvenido a Gamer House'/>}/>
             <Route path='/item/:id' element={<ItemDetailContainer/>}/>
             <Route path='/cart' element={<CartContainer/>}/>

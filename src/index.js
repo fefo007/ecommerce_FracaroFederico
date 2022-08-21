@@ -13,6 +13,8 @@ import './components/Contact.css'
 import './components/About.css'
 import './components/CartContainer.css'
 import './components/Cart.css'
+import './components/BuyModal.css'
+import './components/BuyForm.css'
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
