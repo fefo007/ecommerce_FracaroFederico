@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/ecommerce_FracaroFederico/static/css/main.fe7363f7.css",
+    "main.js": "/ecommerce_FracaroFederico/static/js/main.55643a73.js",
+    "static/js/787.bea0033b.chunk.js": "/ecommerce_FracaroFederico/static/js/787.bea0033b.chunk.js",
+    "static/media/fondoLogo.webp": "/ecommerce_FracaroFederico/static/media/fondoLogo.19fc472cb3edc025af0c.webp",
+    "static/media/fondo-gamer.webp": "/ecommerce_FracaroFederico/static/media/fondo-gamer.fd09c217cef435d6f016.webp",
+    "static/media/juegos2.webp": "/ecommerce_FracaroFederico/static/media/juegos2.5b7661178e89b5815de8.webp",
+    "static/media/juegos3.webp": "/ecommerce_FracaroFederico/static/media/juegos3.60b7f7b9b29f4c527704.webp",
+    "static/media/juegos1.webp": "/ecommerce_FracaroFederico/static/media/juegos1.64758b6bc78c7a0a5b1f.webp",
+    "static/media/insta.png": "/ecommerce_FracaroFederico/static/media/insta.e719d8b29f452a16302d.png",
+    "static/media/emtyCart.jpg": "/ecommerce_FracaroFederico/static/media/emtyCart.09e13fe312cc1e69d4d9.jpg",
+    "static/media/gamerLogo.png": "/ecommerce_FracaroFederico/static/media/gamerLogo.2529829d2584df09895a.png",
+    "static/media/twit.png": "/ecommerce_FracaroFederico/static/media/twit.93ac3f9a344ecd5d01a4.png",
+    "static/media/face.png": "/ecommerce_FracaroFederico/static/media/face.a5def58db1e9c1b38269.png",
+    "static/media/exboxLogo.webp": "/ecommerce_FracaroFederico/static/media/exboxLogo.e397d87cf68adb9d5a66.webp",
+    "static/media/nintendoLogo.webp": "/ecommerce_FracaroFederico/static/media/nintendoLogo.7a9642d80ec1a4571728.webp",
+    "static/media/playLogo.webp": "/ecommerce_FracaroFederico/static/media/playLogo.0391113ee4a852a7d2e9.webp",
+    "static/media/pcLogo.webp": "/ecommerce_FracaroFederico/static/media/pcLogo.b4a2c192db39bd24fd52.webp",
+    "static/media/carrito.webp": "/ecommerce_FracaroFederico/static/media/carrito.fcb0d385ee0b51141636.webp",
+    "index.html": "/ecommerce_FracaroFederico/index.html",
+    "main.fe7363f7.css.map": "/ecommerce_FracaroFederico/static/css/main.fe7363f7.css.map",
+    "main.55643a73.js.map": "/ecommerce_FracaroFederico/static/js/main.55643a73.js.map",
+    "787.bea0033b.chunk.js.map": "/ecommerce_FracaroFederico/static/js/787.bea0033b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fe7363f7.css",
+    "static/js/main.55643a73.js"
+  ]
+}
