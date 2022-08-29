@@ -1,10 +1,15 @@
-
+.itemdetailContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-image: url(../complements/Image/fondo-gamer.webp);
+}
 .itemDetail{
     display: grid;
     grid-template-columns: repeat(4,25%);
     grid-template-rows:50px 350px 50px auto 50px auto;
     padding: 15px;
-    background-image: url(../complements/Image/fondo-gamer.webp);
+    
 }
 .itemDetail__title{
     display: flex;
@@ -67,6 +72,7 @@
     display: flex;
     flex-direction:column;
     align-items: center;
+    text-decoration: none;
 }
 .itemDetail__aside__butons__buy{
     padding: 0px 10px;
@@ -98,3 +104,11 @@
             background-color: white;
             color: rgb(147, 26, 147);
         }
+.itemDetail__aside__butonsB{
+    display: flex;
+    flex-direction:row;
+    grid-column: 2/4;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}

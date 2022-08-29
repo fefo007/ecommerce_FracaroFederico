@@ -1,5 +1,5 @@
 
-import { Button, Container, Form, Nav, Navbar, NavDropdown} from 'react-bootstrap'
+import { Container, Form, Nav, Navbar, NavDropdown} from 'react-bootstrap'
 import './NavBar.css'
 import nintendoLogo from '../complements/Logos/nintendoLogo.webp'
 import pcLogo from '../complements/Logos/pcLogo.webp'
@@ -8,9 +8,25 @@ import exboxLogo from '../complements/Logos/exboxLogo.webp'
 import CartWidget from './CartWidget';
 import GamerHouseLogo from '../complements/Logos/gamerLogo.png'
 import { LinkContainer } from 'react-router-bootstrap'
-import { Link } from 'react-router-dom'
+import { Link} from 'react-router-dom'
+import { useContext } from 'react'
+import { CartContext } from '../context/CartContext'
+
+
 
 function NavBar() {
+  const {setSearch} = useContext(CartContext);
+  const handleSearch =(e)=>{
+    const searchVal=e.target.value
+    console.log(searchVal)
+    setSearch(searchVal)
+  }
+  const searchNav=(e)=>{
+    if(e.key==='Enter'){
+      e.preventDefault()
+    }
+  }
+
   return (
     <div className='navbarContainer'>
     <div className='navbarContainer__logo'>
@@ -33,17 +49,17 @@ function NavBar() {
             navbarScroll
           >
             <NavDropdown  title="Categorias" id="navbarScrollingDropdown">
-              <LinkContainer to='/category/Accesorios'>
+              <LinkContainer to='/category/Accesorio'>
                 <NavDropdown.Item >
                   Accesorios
                 </NavDropdown.Item>
               </LinkContainer>
-              <LinkContainer to='/category/Consolas'>
+              <LinkContainer to='/category/Consola'>
                 <NavDropdown.Item >
                   Consolas
                 </NavDropdown.Item>
               </LinkContainer>
-              <LinkContainer to='/category/GiftCards'>
+              <LinkContainer to='/category/GiftCard'>
                 <NavDropdown.Item >
                   Gift Cards
                 </NavDropdown.Item>
@@ -86,17 +102,15 @@ function NavBar() {
                     Sobre Nosotros
                   </Nav.Link>
                 </LinkContainer>
-
-            
           </Nav>
           <Form className="d-flex">
             <Form.Control
               type="search"
               placeholder="Buscar"
               className="me-2"
-              aria-label="Search"
+              onChange={handleSearch}
+              onKeyDown={searchNav}
             />
-            <Button variant="outline-light">Buscar</Button>
           </Form>
         </Navbar.Collapse>
       </Container>

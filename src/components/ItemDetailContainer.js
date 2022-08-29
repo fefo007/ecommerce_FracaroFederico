@@ -26,7 +26,7 @@ const ItemDetailContainer = () => {
         }, [id]);
         
     return ( 
-        <div>
+        <div className="itemdetailContainer">
             {Loading?<div>
                         <>
                             <Button variant="primary" disabled>

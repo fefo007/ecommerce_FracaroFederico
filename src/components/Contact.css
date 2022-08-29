@@ -1,6 +1,28 @@
 .contacto{
     display: flex;
     flex-direction: column;
+    align-items: center;
     height: 400px;
     background-image: url(../complements/Image/fondo-gamer.webp);
 }
+.contacto__form{
+    width: 60%;
+}
+.contacto__text{
+    width: 60%;
+}
+.contacto__btn{
+    padding: 0px 10px;
+    margin-top: 10px;
+    border-radius: 30%;
+    border-color: rgb(147, 26, 147);
+    color: #fff;
+    box-shadow: 0 0 40px 40px rgb(147, 26, 147) inset, 0 0 0 0 rgb(147, 26, 147);
+    -webkit-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+}
+    .contacto__btn:hover{
+        box-shadow: 0 0 10px 0 rgb(147, 26, 147) inset, 0 0 10px 4px rgb(147, 26, 147);
+        background-color: white;
+        color: rgb(147, 26, 147);
+    }

@@ -13,14 +13,33 @@
     flex-direction: row;
     justify-content: center;
 }
+.cart__botonQuitar__btn{
+    padding: 10px;
+    margin: 10px;
+    border-radius: 30%;
+    border-color: rgb(147, 26, 147);
+    color: #fff;
+    box-shadow: 0 0 40px 40px rgb(147, 26, 147) inset, 0 0 0 0 rgb(147, 26, 147);
+    -webkit-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+}
+    .cart__botonQuitar__btn:hover {
+    box-shadow: 0 0 10px 0 rgb(147, 26, 147) inset, 0 0 10px 4px rgb(147, 26, 147);
+    background-color: white;
+    color: rgb(147, 26, 147);
+}
+
+
+
 .cart__productos{
     display: flex;
     grid-column:1/2;
     grid-row: 1;
     flex-direction: row;
-    justify-content:space-evenly;
+    justify-content: space-between;
     align-items: center;
 }
+
 .cart__cant{
     display: flex;
     grid-column:2/3;

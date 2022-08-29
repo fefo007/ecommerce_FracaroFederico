@@ -22,7 +22,7 @@ const Cart = ({cart}) => {
                     ${totalProducto}
                 </div>
                 <div className="cart__botonQuitar">
-                    <button onClick={()=>removeToCart(cart.id)}>Quitar producto</button>
+                    <button className="cart__botonQuitar__btn" onClick={()=>removeToCart(cart.id)}>Quitar producto</button>
                 </div>
             </section>
         );
