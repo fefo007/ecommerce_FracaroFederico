@@ -1,12 +1,14 @@
 # Gamer-House Proyecto en React Js
 
 Proyecto creado con [Create React App](https://github.com/facebook/create-react-app).
+
+## Informacion
 Aplicacion web, de un Ecommerce relacionado con videojuegos y consolas.
 Proyecto final para el curso de React Js de CoderHouse.
 
 ## Ejemplo de compra
 
-![](/testBuy.gif"text to show in mouseover")
+![](/testBuy.gif)
 
 ## Tecnologias utilizadas
 
@@ -14,6 +16,9 @@ Proyecto final para el curso de React Js de CoderHouse.
 - CSS 3
 - JavaScript
 - React Js
+- React Boostrap
+- Node Js
+
 
 ## Link del sitio web
 
