@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ecommerce_FracaroFederico/static/css/main.fe7363f7.css",
-    "main.js": "/ecommerce_FracaroFederico/static/js/main.55643a73.js",
+    "main.js": "/ecommerce_FracaroFederico/static/js/main.56435abc.js",
     "static/js/787.bea0033b.chunk.js": "/ecommerce_FracaroFederico/static/js/787.bea0033b.chunk.js",
     "static/media/fondoLogo.webp": "/ecommerce_FracaroFederico/static/media/fondoLogo.19fc472cb3edc025af0c.webp",
     "static/media/fondo-gamer.webp": "/ecommerce_FracaroFederico/static/media/fondo-gamer.fd09c217cef435d6f016.webp",
@@ -20,11 +20,11 @@
     "static/media/carrito.webp": "/ecommerce_FracaroFederico/static/media/carrito.fcb0d385ee0b51141636.webp",
     "index.html": "/ecommerce_FracaroFederico/index.html",
     "main.fe7363f7.css.map": "/ecommerce_FracaroFederico/static/css/main.fe7363f7.css.map",
-    "main.55643a73.js.map": "/ecommerce_FracaroFederico/static/js/main.55643a73.js.map",
+    "main.56435abc.js.map": "/ecommerce_FracaroFederico/static/js/main.56435abc.js.map",
     "787.bea0033b.chunk.js.map": "/ecommerce_FracaroFederico/static/js/787.bea0033b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fe7363f7.css",
-    "static/js/main.55643a73.js"
+    "static/js/main.56435abc.js"
   ]
 }
