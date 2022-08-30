@@ -15,7 +15,7 @@ const ItemListContainer = ({greeting})=>{
     const {id,consolid}=useParams()
     const [current,setCurrent]=useState(0)
     const [hiddenPagPrev,sethiddenPagPrev]=useState(true)
-    
+
     useEffect(() => {
         const db=getFirestore()
         const productCollection=collection(db,'productos')

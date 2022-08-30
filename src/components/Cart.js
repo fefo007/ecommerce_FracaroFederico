@@ -5,7 +5,7 @@ import { CartContext } from "../context/CartContext";
 const Cart = ({cart}) => {
     const {removeToCart} = useContext(CartContext);
     const totalProducto=cart.price*cart.quantity
-
+    
     return ( 
             <section className="cart">
                 <div className="cart__productos">
