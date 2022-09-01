@@ -36,7 +36,7 @@ initializeApp(firebaseConfig);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <BrowserRouter>
+  <BrowserRouter basename='/ecommerce_FracaroFederico'>
     <React.StrictMode>
       <App />
     </React.StrictMode>

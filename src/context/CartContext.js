@@ -7,14 +7,9 @@ export const CartContext = createContext({});
 
 const CartProvider=({children})=>{
     const [cart, setCart] = useLocalStorage("carrito",[])
-    // localStorage.setItem('carrito',JSON.stringify(cart))
+
     const [search,setSearch]=useState('')
 
-    //     CARGAR CARRO EXISTENTE
-    // if(cart!==[]&&cart!==null){
-    // const storageRetrieve=JSON.parse(localStorage.getItem("carrito"))
-    // setCart(storageRetrieve)
-    // }
     // VACIAR POR COMPLETO CARRITO
     const cleanCart=()=>{
         setCart([])
